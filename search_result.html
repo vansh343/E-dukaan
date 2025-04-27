@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #headerr {
+            background-color: antiquewhite;
+            text-align: center;
+        }
+
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 28%;
+            background: gray;
+        }
+        .main-nav {
+            li {
+                border-bottom: solid 2px rgb(163, 151, 151);
+            }
+
+            a {
+                padding: 13px;
+                color: rgba(240, 236, 236, 0.914);
+                font: 400 1.125em sans;
+                text-align: center;
+                font-size: large;
+                text-decoration: none;
+            }
+        }
+        li {
+            width: 65%;
+            border-left: solid 1px rgb(150, 126, 126);
+
+            
+        }
+
+        a {
+            display: block;
+            height: 30px;
+            text-align: center;
+            color: rgb(103, 85, 69);
+            font-size: larger;
+
+            &:hover {
+                color: rgb(224, 224, 233);
+            }
+        }
+        
+
+       
+        .list-hover-slide {
+
+            li {
+                position: relative;
+                overflow: hidden;
+            }
+
+            a {
+                display: block;
+                position: relative;
+                z-index: 1;
+                transition: .35s ease color;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    z-index: -1;
+                    position: absolute;
+                    left: -100%;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-right: solid 5px rgb(85, 121, 78);
+                    background: rgb(85, 121, 78);
+                    transition: .35s ease left;
+                }
+
+                &.is-current,
+                &:hover {
+
+                    &:before {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .c1 {
+            display: inline-block;
+        }
+
+        .layoutt {
+            justify-content: space-between;
+            border: 2px solid orange;
+        }
+
+        .contentt {
+            display: inline-block;
+            border: 1px solid red;
+            margin: 10px;
+            height: auto;
+            padding-bottom: 15px;
+            width: 50%;
+        }
+
+        .button1 {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button1:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="headerr">
+        <h1>E-dukaan</h1>
+        <h6 style="font-size:medium;">we are here to serve the quality at time</h6>
+    </div><br>
+    <header class="header" role="banner">
+        
+        <div class="nav-wrap">
+            <nav class="main-nav" role="navigation">
+                <ul class="unstyled list-hover-slide">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bigger">
+       
+        <div class="layoutt" class="c1">
+            <div class="contentt" style="height: auto;width: 50%;">
+                <img src="" alt="logo">
+                <h3>item_name</h3>
+                <p>this is the description of product which tell you</p>
+                <h5>price(06.00)</h5>
+                <button class="button1" type="submit">Buy</button>
+                <button class="button1" type="submit"> Add to cart </button>
+            </div>
+            <div class="contentt" style="height: auto;width: 50%;">
+                <img src="" alt="logo">
+                <h3>item_name</h3>
+                <p>this is the description of product which tell you</p>
+                <h5>price(06.00)</h5>
+                <button class="button1" type="submit">Buy</button>
+                <button class="button1" type="submit"> Add to cart </button>
+            </div>
+            <div class="contentt" style="height: auto;width: 50%;">
+                <img src="" alt="logo">
+                <h3>item_name</h3>
+                <p>this is the description of product which tell you</p>
+                <h5>price(06.00)</h5>
+                <button class="button1" type="submit">Buy</button>
+                <button class="button1" type="submit"> Add to cart </button>
+            </div>
+            <div class="contentt" style="height: auto;width: 50%;">
+                <img src="" alt="logo">
+                <h3>item_name</h3>
+                <p>this is the description of product which tell you</p>
+                <h5>price(06.00)</h5>
+                <button class="button1" type="submit">Buy</button>
+                <button class="button1" type="submit"> Add to cart </button>
+            </div>
+            <div class="contentt" style="height: auto;width: 50%;">
+                <img src="" alt="logo">
+                <h3>item_name</h3>
+                <p>this is the description of product which tell you</p>
+                <h5>price(06.00)</h5>
+                <button class="button1" type="submit">Buy</button>
+                <button class="button1" type="submit"> Add to cart </button>
+            </div>
+
+            <div class="contentt" style="height: auto;width: 50%;">
+                <img src="" alt="logo">
+                <h3>item_name</h3>
+                <p>this is the description of product which tell you</p>
+                <h5>price(06.00)</h5>
+                <button class="button1" type="submit">Buy</button>
+                <button class="button1" type="submit"> Add to cart </button>
+            </div>
+            <div class="contentt" style="height: auto;width: 50%;">
+                <img src="" alt="logo">
+                <h3>item_name</h3>
+                <p>this is the description of product which tell you</p>
+                <h5>price(06.00)</h5>
+                <button class="button1" type="submit">Buy</button>
+                <button class="button1" type="submit"> Add to cart </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
