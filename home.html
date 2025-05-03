@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College E-Commerce</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: -380px;
+            /* Initially hidden */
+            transition: left 0.3s ease;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            background-color: #444;
+        }
+
+        .sidebar a:hover {
+            background-color: #007bff;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            background-color: #333;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .small_nav {
+        width: 100%;
+        height: 40px;
+        background-color: #444;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 15px;
+        }
+
+        .menu-icon {
+            font-size: 25px;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product {
+            display: inline-block;
+            width: 20%;
+            background-color: white;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .product img {
+            width: 100%;
+            height: 300px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #customerDetails {
+        background-color: #444;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    #customerDetails p {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+    #customerDetails span {
+        font-weight: bold;
+        color: #ffcc00;
+    }
+    .search-bar {
+        width: 70%;
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        justify-items: center;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">×</div>
+        <div id="customerDetails">
+            <p> <span id="custName">John Doe</span></p>
+            <p><strong></strong> <span id="custAddress">123 College Street, City</span></p>
+            <p><strong></strong> <span id="custEmail">john.doe@email.com</span></p>
+        </div>
+        
+
+        <a href="#">Home</a>
+        <a href="#">Cart</a>
+        <a href="#">Your Orders</a>
+        <a href="#">Wishlist</a>
+        <a href="#">About Us</a>
+    </div>
+
+    <!-- Navigation Bar with Menu Icon -->
+
+    <div class="main-content">
+        <header>Welcome to College E-Commerce</header>
+        <div class="small_nav">
+            <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+            <input type="text" class="search-bar" placeholder="Search for products...">
+        </div>
+
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product">
+                <img src="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjWkIaz3_2MAxUopGYCHcQ-EqsYABABGgJzbQ&co=1&gclid=Cj0KCQjw8cHABhC-ARIsAJnY12zZiiVD6CG1G-dtYDn1rc4PxW17J1YHVur8MrYI2TPzJWLxJCeKj-waAupxEALw_wcB&ohost=www.google.com&cid=CAESVuD2s3ZUBq3DivIDOcxRu4ILH6LEdnEr-Jfwo09xGjlqQz3skd8KzvB_kkVGlz9zwcfQuCnYVIIWhlLPqa89LoTJRh8j-lLJBCGqna7fuIvnzIJlQxGy&sig=AOD64_2KHWxt_IBsdvMbYNTFTtcAZgJ6qw&ctype=5&q=&ved=2ahUKEwjTmoKz3_2MAxUexzgGHffpMXoQ9aACKAB6BAgLEA0&adurl="
+                    alt="Product 1">
+                <div class="product-info">
+                    <h3 id="productName">Wireless Earbuds</h3>
+                    <p id="productPrice">Price: ₹1200</p>
+                    <button class="cart-btn" id="addToCart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQeX4DMJo_o1kxG8kKKxfoEzcMjzjFtvv970vs4D9-UgTnLoKD21aDyIfRiSPi7nDJIclq9VZRPHFMlkr6O7NeaCOMzMMFclePSQniiuGocl1qPafb-evQo"
+                    alt="Product 2">
+                <div class="product-info">
+                    <h3 id="productName">Wireless Earbuds</h3>
+                    <p id="productPrice">Price: ₹1200</p>
+                    <button class="cart-btn" id="addToCart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="data:image/webp;base64,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"
+                    alt="Product 2">
+                <div class="product-info">
+                    <h3 id="productName">Wireless Earbuds</h3>
+                    <p id="productPrice">Price: ₹1200</p>
+                    <button class="cart-btn" id="addToCart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <div class="product-info">
+                    <h3 id="productName">Wireless Earbuds</h3>
+                    <p id="productPrice">Price: ₹1200</p>
+                    <button class="cart-btn" id="addToCart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/G/31/amazonservices/Shoes_lifestyle.jpg" alt="Product 2">
+                <div class="product-info">
+                    <h3 id="productName">Wireless Earbuds</h3>
+                    <p id="productPrice">Price: ₹1200</p>
+                    <button class="cart-btn" id="addToCart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTfusqMQi3NLLBXxkfwmbIpJtCtD_8S7fTDtCcqxw-gTv7xKhF_afMX7W4-VHyWstNts2IOUJqDYmrDK8hTNi_Rfrzxb1ziXLrSCQLQsVzdX9vivk2uW2_A"
+                    alt="Product 2">
+                <div class="product-info">
+                    <h3 id="productName">Wireless Earbuds</h3>
+                    <p id="productPrice">Price: ₹1200</p>
+                    <button class="cart-btn" id="addToCart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSbzlpRfwyW-SN8TybcA0NQy4bSG07QcoexkDSC9TCzxjLiJf7RZLh2H8Lzdy0OjgR4nncABNH55OuN91_T_LS3bmHhiDxIxg"
+                    alt="Product 2">
+                <div class="product-info">
+                    <h3 id="productName">Wireless Earbuds</h3>
+                    <p id="productPrice">Price: ₹1200</p>
+                    <button class="cart-btn" id="addToCart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>© 2025 College E-Commerce | All rights reserved.</footer>
+    </div>
+
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-380px"; // Hide sidebar
+            } else {
+                sidebar.style.left = "0px"; // Show sidebar
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
